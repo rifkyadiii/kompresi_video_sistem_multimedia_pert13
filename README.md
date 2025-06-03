@@ -1,4 +1,12 @@
-# Skrip Kompresi Video H.264 dengan Analisis Visual
+# Skrip Kompresi Video H.264
+
+**Kelompok 6 Sistem Multimedia**
+
+**Anggota:**
+1. Gevira Zahra Shofa (1227050050)
+2. Moch Rifky Aulia Adikusumah (1227050072)
+3. Muhammad Zidan (1227050079)
+4. Muhammad Ahsani Taqwim (1227050083)
 
 Skrip Python ini dirancang untuk mengkompresi sekumpulan video menggunakan codec H.264 (libx264) melalui FFmpeg. Skrip ini tidak hanya melakukan kompresi tetapi juga mengumpulkan statistik detail tentang proses tersebut dan memvisualisasikan perbandingan ukuran file serta rasio kompresi menggunakan Matplotlib.
 
