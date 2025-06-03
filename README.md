@@ -100,14 +100,17 @@ Skrip Python ini dirancang untuk mengkompresi sekumpulan video menggunakan codec
     1.  **Perbandingan Ukuran File Video**: Menunjukkan ukuran file dalam MB sebelum dan sesudah kompresi H.264 untuk setiap video yang berhasil diproses.
     2.  **Rasio Kompresi Video**: Menampilkan persentase rasio kompresi. Bar hijau menandakan pengurangan ukuran file (kompresi berhasil), sedangkan bar merah (nilai negatif) menandakan penambahan ukuran file.
 
-## Analisis Hasil (Berdasarkan Contoh)
+## Analisis Hasil
+
+![image](https://github.com/user-attachments/assets/2ecd4f02-17d6-4453-afb2-7a34028b8957)
+![image](https://github.com/user-attachments/assets/766fe75b-8a8a-4ad0-bb56-596fd0d2d8b9)
 
 * **Kompresi H.264 pada berbagai format**:
     * **MP4 dan MOV**: Umumnya menunjukkan pengurangan ukuran yang baik. File `.mov` dengan CRF 25 dan preset `fast` mencapai efisiensi terbaik dalam contoh (rasio ~34.26%).
     * **MKV**: Mungkin menunjukkan sedikit atau hampir tidak ada perubahan ukuran, tergantung pada konten asli dan pengaturan (rasio ~2.23% dengan CRF 22, preset `medium`).
     * **AVI**: Dapat mengalami **peningkatan ukuran** setelah proses kompresi (rasio negatif, misal -52.34%). Ini bisa terjadi jika file AVI asli sudah sangat terkompresi dengan codec yang efisien atau jika kombinasi parameter H.264 tidak optimal untuk jenis stream di dalam AVI tersebut.
 * **Masalah Kompatibilitas Kontainer**:
-    * **WebM**: Dalam contoh yang diberikan, kompresi video kelima (`.webm`) disebutkan gagal. Skrip ini mencoba mempertahankan format kontainer asli. Meskipun H.264 secara teknis dapat dimasukkan ke dalam kontainer WebM, ini bukan kombinasi standar (WebM biasanya menggunakan VP8/VP9/AV1). Kegagalan ini mungkin disebabkan oleh batasan FFmpeg dengan kombinasi tersebut atau cara `ffmpeg-python` menangani streamnya. Skrip akan melewati file ini jika terjadi error FFmpeg.
+    * **WebM**: Dalam contoh yang diberikan, kompresi video kelima (`.webm`) gagal. Skrip ini mencoba mempertahankan format kontainer asli. Meskipun H.264 secara teknis dapat dimasukkan ke dalam kontainer WebM, ini bukan kombinasi standar (WebM biasanya menggunakan VP8/VP9/AV1). Kegagalan ini mungkin disebabkan oleh batasan FFmpeg dengan kombinasi tersebut atau cara `ffmpeg-python` menangani streamnya. Skrip akan melewati file ini jika terjadi error FFmpeg.
 
 ## Kustomisasi
 
