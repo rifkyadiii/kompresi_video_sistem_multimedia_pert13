@@ -130,5 +130,3 @@ Skrip Python ini dirancang untuk mengkompresi sekumpulan video menggunakan codec
 * `Preset` memengaruhi kecepatan kompresi dan efisiensi ukuran. Preset yang lebih lambat (`slow`, `slower`, `veryslow`) membutuhkan waktu lebih lama tetapi dapat menghasilkan kompresi yang lebih baik untuk ukuran file tertentu. Preset yang lebih cepat (`fast`, `faster`, `ultrafast`) bekerja lebih cepat tetapi mungkin kurang efisien.
 * Skrip menggunakan `acodec='aac'` dan `strict='experimental'` untuk audio. Ini adalah pilihan umum, tetapi mungkin perlu disesuaikan untuk kebutuhan khusus.
 * Pastikan Anda memiliki ruang disk yang cukup untuk menyimpan video hasil kompresi.
-
-```
